@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <a href="/" class="header__btn-back">
+    <svg class="header__btn-icon" width="19" height="16">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#back"></use>
+    </svg>
+  </a>
+  <a href="/" class="header__logo-link">
+    <svg class="header__logo" width="64" height="26">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#post"></use>
+    </svg>
+  </a>
+{% endblock %}
+{% block content %}
+  <div class="items__item item item--post">
+    {% include '_post_header.html' %}
+    <a href="" class="item__post-link">
+      <img src="{{ post.pic }}" alt="" width="348" class="item__post-img">
+    </a>
+    <div class="item__descr">
+      <p class="item__text">
+        Закрытые бутерброды пришли к&nbsp;нам из&nbsp;Англии. Вкусные и&nbsp;простые рецепты сэндвичей с&nbsp;фото позволят вам разнообразить завтраки и&nbsp;сделать перекусы более сытными! Они могут быть, как горячими, так и&nbsp;холодными.
+      </p>
+      <p class="item__text">
+        Итальянские закрытые сэндвичи называются панини. Для их&nbsp;приготовления берут чиабатту. В&nbsp;классическом рецепте используют традиционные итальянские продукты: помидоры, базилик, мацареллу.</p>
+    </div>
+    <div class="item__bottom">
+      <div class="item__post-info">
+        <p class="item__comments-counter">3 комментария</p>
+        <div class="item__counter">
+          <img src="img/eye.png" alt="" class="item__counter-icon" width="26">
+          <span class="item__counter-text">1023</span>
+        </div>
+      </div>
+      <div class="item__comments">
+        <p class="item__comment">
+          <b>user 1:</b> комментарий пользователя который его оставил
+        </p>
+        <p class="item__comment">
+          <b>user 2:</b> еще один комментарий
+        </p>
+        <p class="item__comment">
+          <b>user 3:</b> и&nbsp;какой-то коммент еще
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
